@@ -17,13 +17,26 @@ margin: 0;
 </div>
 <div style="max-width: 1024px; display: flex; align-items: flex-start; margin:auto; flex-direction: column;">
 <h1>Create Data:</h1>
+<button class="collapsible">Create Data</button>
+<div class="content">
 <P>Add a title:</p>
 <input>
+</div>
 <P>&nbsp;</p>
 <h1>Your Data:</h1>
 <p>It appears you haven't saved any data yet. Create new data!</p>
 </div>
 <script>
+var collapsible = document.getElementById("collapsible");
+collapsible.addEventListener("click", function() {
+var content = this.nextElementSibling;
+if (content.style.display == "block") {
+content.style.display = "none";
+} else {
+content.style.display = "block";
+}
+}
+});
 </script>
 </body>
 </html>
